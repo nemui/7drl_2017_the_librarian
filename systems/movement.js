@@ -8,7 +8,7 @@ Game.systems.movement = function systemMovement ( entities ) {
 			var x = curEntity.components.move.x;
 			var y = curEntity.components.move.y;
 			
-			if (!curEntity.components.move.entityId in Game.entities) {
+			if (!(curEntity.components.move.entityId in Game.entities)) {
 				delete Game.entities[entityId];
 				continue;
 			}

@@ -260,3 +260,7 @@ Game.resize = function() {
 }
 
 window.addEventListener("resize", Game.resize.bind(Game));
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+	Game.init();
+});

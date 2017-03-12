@@ -8,7 +8,13 @@ Game.systems.movement = function systemMovement ( entities ) {
 			var x = curEntity.components.move.x;
 			var y = curEntity.components.move.y;
 			
-			var movingEntity = Game.entities[curEntity.components.move.entityId];			
+			if (!curEntity.components.move.entityId in Game.entities) {
+				delete Game.entities[entityId];
+				continue;
+			}
+			
+			var movingEntity = Game.entities[curEntity.components.move.entityId];	
+			
 			var obstacle = null;
 			if (movingEntity.components.collision) {
 								

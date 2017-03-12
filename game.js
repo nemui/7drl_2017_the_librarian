@@ -259,8 +259,7 @@ Game.resize = function() {
 	this.rotDisplay.getContainer().style.top = backgroundY + this.ROT_DISPLAY_Y + "px";
 }
 
-window.addEventListener("resize", Game.resize.bind(Game));
-
 document.addEventListener("DOMContentLoaded", function(event) { 
 	Game.init();
+	window.addEventListener("resize", Game.resize.bind(Game));
 });

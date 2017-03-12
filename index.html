@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <title>The Librarian: 7drl 2017 by Dmitry Mamchur</title>
+        
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body onload="Game.init()">
+		<img id="scroll" src="scroll.png">
+		
+		<script>
+			window.Game = {	
+				Components: {},
+				systems: {},
+				entities: {},	
+				mainDisplay: null,
+				ctx: null,
+				rotDisplayBackground: null,
+				rotDisplay: null,
+				BACKGROUND_WIDTH: 1170,
+				BACKGROUND_HEIGHT: 659,
+				ROT_DISPLAY_X: 70,
+				ROT_DISPLAY_Y: 50,				
+				ROT_CHAR_WIDTH: 80,
+				ROT_CHAR_HEIGHT: 43,
+				DUNGEON_HEIGHT: 10,
+				CHAMBERS: 3,
+				WALL: "#",
+				FLOOR: ".",
+				BOOK: "?",
+				DUNGEON_COLOR: "#2f4e6f",
+				FOG_COLOR: "#98b1c4",
+				map: {},				
+				engine: null,
+				player: null,
+				interlopers: [],
+				book: null,
+				advanceActor: false
+			}
+		</script>
+		
+		<script src="rot.min.js"></script>		
+		
+		<script src="entity.js"></script>
+		<script src="components.js"></script>
+		<script src='assemblages.js'></script>
+		<script src="systems\scheduler.js"></script>
+		<script src="systems\userInput.js"></script>
+		<script src="systems\ai.js"></script>
+		<script src="systems\movement.js"></script>
+		<script src="systems\fighting.js"></script>
+		<script src="systems\reading.js"></script>
+		<script src="systems\fovUpdate.js"></script>
+		<script src="systems\fog.js"></script>
+		<script src="systems\render.js"></script>
+		<script src="systems\chronicler.js"></script>
+		
+		<script src="books.js"></script>		
+		
+		<script src="game.js"></script>
+    </body>
+</html>

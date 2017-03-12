@@ -248,8 +248,8 @@ Game.gameLoop = function gameLoop() {
 }    
 
 Game.resize = function() {	
-	this.mainCanvas.width = document.documentElement.clientWidth;
-	this.mainCanvas.height = document.documentElement.clientHeight;
+	this.mainCanvas.width = window.innerWidth;
+	this.mainCanvas.height = window.innerHeight;
 	
 	var backgroundX = (this.mainCanvas.width - this.BACKGROUND_WIDTH) / 2;
 	var backgroundY = (this.mainCanvas.height - this.BACKGROUND_HEIGHT) / 2;	

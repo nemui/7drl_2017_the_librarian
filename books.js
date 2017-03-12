@@ -64,6 +64,7 @@ Game.books = [
 		bookEffect: "You suddenly look different.",
 		affectReader: function (reader) {
 			reader.components.appearance.symbol = "W";
+			reader.components.appearance.color = "white";
 		}
 	},
 	
